@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+    
+    <nav>
+        <div class="logo">
+            <img src="pic/logo.png" alt="Hospital Logo">
+        </div>
+       <ul>
+    <li><i class="fas fa-home"></i> <a href="#">Home</a></li>
+    <li><i class="fas fa-cogs"></i> <a href="#">Services</a></li>
+    <li><i class="fas fa-info-circle"></i> <a href="#about">About us</a></li>
+    <li><i class="fas fa-envelope"></i> <a href="#contact">Contact Us</a></li>
+    <li class="login"><i class="fas fa-sign-in-alt"></i> <a href="#">Log in</a></li>
+</ul>
+
+        <a class="book-appointment-button" href="#">Book an Appointment</a>
+    </nav>
+    <div class="wrap">
+        <div id="dir-control-left" class="dir-control"><i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
+</div>
+        <div id="slider">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <span>Image One</span>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <span>Image Two</span>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <span>Image Three</span>
+                </div>
+            </div>
+        </div>
+        <div id="dir-control-right" class="dir-control"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+</div>
+    </div>
+  <h1 id="about">About Us</h1> 
+   <div class="about">
+    <div class="aboutpic">
+        <img src="pic/logo.png" alt="">
+        </div>
+    <div class="abouttext">
+        <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+    </div>
+    </div>
+    <h1 id="contact">Contact Form</h1>
+    <form action="process.php" method="post"> <!-- Replace "process.php" with your server-side script for handling form submissions -->
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+        <br><br>
+        
+        <label for="message">Enter Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <br><br>
+        
+        <input type="submit" value="Send Message">
+    </form>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Logins</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>D-204, Hole Town South West, Delhi-110096, India</p>
+                <p>Phone: 1122334455</p>
+                <p>Email: info@gmail.com</p>
+                <p>Timing: 9 am To 8 pm</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
