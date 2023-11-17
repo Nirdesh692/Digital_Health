@@ -1,19 +1,28 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "hospital") or die("connection failed");
 
-if (!empty($_POST['save'])) {
+if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $phone = $_POST['phone'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM patients_signup WHERE phone='$phone' AND password='$password'";
+    $query = "SELECT * FROM patients_signup WHERE phone='$phone'";
     $result = mysqli_query($conn, $query);
     $count = mysqli_num_rows($result);
+    echo $count;
 
-    if ($count > 0) {
-        header("Location: dashboard.php");
-        exit;
+    if ($count == 1) {
+        while($row=mysqli_fetch_assoc($result)){
+            if(password_verify($password, $row['password'])){
+                header("Location: dashboard.php");
+                exit;
+            }
+            else{
+                $error_message = "Phone Number or Password is wrong";
+
+            }
+        }
     } else {
-        $error_message = "Login not successful";
+        $error_message = "Phone Number or Password is wrong";
     }
 }
 ?>
