@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+    <link rel="stylesheet" type="text/css" href="patient_signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="left-section">
+            <img src="pic/logo.png" alt="Your Logo">
+        </div>
+        <div class="right-section">
+            <div class="signup-box">
+                <form action="patient_signup_php.php" method="post">
+                    <h1>Create an Account</h1>
+                    <div class="input-container">
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                        <input type="text" name="address" placeholder="Address" required>
+                        <input type="text" name="phone" placeholder="Phone Number" required>
+                       
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <h5>If you already have account <a href="patient_login.html">Click here to login</a></h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
